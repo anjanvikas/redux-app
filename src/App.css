@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.app h1 {
+  color: #333; /* Dark color for better visibility */
+  font-size: 24px; /* Font size for h1 */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Add Task Styles */
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Task List Styles */
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}
+
+.task-text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.task-text[style*="line-through"] {
+  color: #888;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #ff6347;
+  color: white;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #ff4500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .task-checkbox {
+    margin-bottom: 10px;
+  }
+
+  .task-text {
+    font-size: 14px;
+  }
+
+  .delete-button {
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust header size for smaller screens */
+  }
+
+  .add-task input {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+  .app {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .task-item {
+    padding: 10px;
+  }
+
+  .task-checkbox {
+    margin-right: 8px;
+  }
+
+  .task-text {
+    font-size: 14px;
+  }
+
+  .delete-button {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 18px; /* Smaller header for very small screens */
+  }
+}
